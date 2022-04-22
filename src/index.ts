@@ -1,11 +1,12 @@
 import { app } from "./app";
 import { insertClass } from "./endpoints/Class/insertClass";
+import { insertTeacher } from "./endpoints/Teacher/insertTeacher";
 
 //POSTS
 
 app.post("/class", insertClass);
 //app.post("/student", insertStudent);
-//app.post("/teacher", insertTeacher);
+app.post("/teacher", insertTeacher);
 
 //GETS
 
