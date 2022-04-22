@@ -3,6 +3,7 @@ import {Class} from "../classes/class"
 import {Student} from "../classes/student"
 import {Teacher} from "../classes/teacher"
 import {gerarId} from '../utils/gerarId'
+import { selectIdBySpecialty } from "./bd-select"
 
 
 
@@ -74,7 +75,6 @@ export const createNewHobbie = async (studantParam: Student, hobby: string): Pro
 
 
 // SQL INSERT FOR NEW TEACHER
-
 export const createNewTeacher = async (teacherParam: Teacher): Promise<any> => {
     const result = await connection.raw(`
         INSERT INTO teacher
@@ -90,18 +90,19 @@ export const createNewTeacher = async (teacherParam: Teacher): Promise<any> => {
 }
 
 
+
 // SQL INSERT TEACHER SPECIALITES
 
-export const createNewTeacherSpecialty = async (teacherParam: Teacher, especialty: string) => {
+ export const createNewTeacherSpecialty = async (teacherParam: Teacher, especialty: string): Promise<any> => {
+
     const result = await connection.raw(`
-    INSERT INTO teacher_has_specialty
-    VALUES (
-        '${new gerarId().execute()}',
+        INSERT INTO teacher_has_specialty (id, teacher_id, specialty_id)
+        VALUES(
+        '${Date.now().toString()}',    
         '${teacherParam.getId()}',
         '${especialty}'
-    );
-    
+        );   
     `)
     return result[0]
-}
+} 
 

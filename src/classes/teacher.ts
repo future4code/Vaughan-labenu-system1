@@ -10,13 +10,12 @@ export class Teacher extends User {
     private specialties: string[]
   ) {
     super(id, name, email, birthDate, classId);
+    this.specialties = specialties;
+
   }
 
-  public getSpecialties(): string[] {
-    return this.specialties;
-  }
+  public getSpecialties(): string[]{
+    return this.specialties
+}
 
-  public setSpecialties(hobby: string): void {
-    this.specialties.push(hobby);
-  }
 }
