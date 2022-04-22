@@ -11,11 +11,9 @@ export class Teacher extends User {
   ) {
     super(id, name, email, birthDate, classId);
     this.specialties = specialties;
-
   }
 
-  public getSpecialties(): string[]{
-    return this.specialties
-}
-
+  public getSpecialties(): string[] {
+    return this.specialties;
+  }
 }

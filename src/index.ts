@@ -1,7 +1,6 @@
 import { app } from "./app";
 import { insertClass } from "./endpoints/Class/insertClass";
-import {insertTeacher} from "./endpoints/Teacher/insertTeacher"
-
+import { insertTeacher } from "./endpoints/Teacher/insertTeacher";
 
 //POSTS
 
