@@ -1,41 +1,44 @@
 export abstract class User {
-    constructor (
-        private id:string,
-        private name: string,
-        private email: string,
-        private birthDate: string,
-        private classId: string
-    ) {}
+  constructor(
+    private id: string,
+    private name: string,
+    private email: string,
+    private birthDate: string,
+    private classId: string
+  ) {}
 
-    public getId (): string {
-        return this.id
-    }
+  //GETTERS
 
-    public getName (): string {
-        return this.name
-    }
+  public getId(): string {
+    return this.id;
+  }
 
-    public setName (name: string): void {
-        this.name = name
-    }
+  public getName(): string {
+    return this.name;
+  }
 
-    public getEmail (): string {
-        return this.email
-    }
+  public getEmail(): string {
+    return this.email;
+  }
 
-    public setEmail (email: string): void {
-        this.email = email
-    }
+  public getBirthDate(): string {
+    return this.birthDate;
+  }
 
-    public getBirthDate (): string {
-        return this.birthDate
-    }
+  public getClassId(): string {
+    return this.classId;
+  }
+  //SETTERS
 
-    public setBirthDate (birthDate: string): void {
-        this.birthDate = birthDate
-    }
-    
-    public getClassId (): string {
-        return this.classId
-    }
+  public setName(name: string): void {
+    this.name = name;
+  }
+
+  public setEmail(email: string): void {
+    this.email = email;
+  }
+
+  public setBirthDate(birthDate: string): void {
+    this.birthDate = birthDate;
+  }
 }
