@@ -131,3 +131,5 @@ dist
 
 
 .DS_Store
+build
+src/endpoints/.DS_Store

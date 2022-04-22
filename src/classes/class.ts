@@ -2,9 +2,10 @@ export class Class {
     constructor (
         private id: string,
         private name: string,
-        private teachersId: string[],
-        private studentsId: string[],
-        private module: number
+        private module: number,
+        private teachersId?: string[],
+        private studentsId?: string[],
+       
     ) {}
 
     public getId (): string {
@@ -15,14 +16,15 @@ export class Class {
         return this.name
     }
 
-    public setName (name: string): void {
-        this.name = name
-    }
-
     public getModule (): number {
         return this.module
     }
 
+
+    public setName (name: string): void {
+        this.name = name
+    }
+    
     public setModule (module: number): void {
         this.module = module
     }
