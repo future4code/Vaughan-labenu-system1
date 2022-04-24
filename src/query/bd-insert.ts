@@ -32,7 +32,7 @@ export const createNewStudent = async (studantParam: Student): Promise<any> => {
             '${studantParam.getClassId}'
         );
     `);
-  return result[0];
+  return result;
 };
 
 // SQL INSERT FOR STUDENT HOBBIE
@@ -49,7 +49,7 @@ export const createNewStudentHobbie = async (
     '${idHobby}'
      );   
     `);
-  return result[0];
+  return result;
 };
 
 // SQL INSERT FOR NEW HOBBIE
@@ -82,7 +82,7 @@ export const createNewTeacher = async (teacherParam: Teacher): Promise<any> => {
             '${teacherParam.getClassId()}'
         );
     `);
-  return result[0];
+  return result;
 };
 
 // SQL INSERT TEACHER SPECIALITES
@@ -99,5 +99,5 @@ export const createNewTeacherSpecialty = async (
         '${especialty}'
         );   
     `);
-  return result[0];
+  return result;
 };
