@@ -3,7 +3,6 @@ import { Class } from "../classes/class";
 import { Student } from "../classes/student";
 import { Teacher } from "../classes/teacher";
 import { gerarId } from "../utils/gerarId";
-import { selectIdBySpecialty } from "./bd-select";
 
 // SQL INSERT FOR NEW CLASS
 
