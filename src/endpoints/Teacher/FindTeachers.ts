@@ -1,16 +1,15 @@
 import { Request, Response } from "express";
-import { selectStudentByName } from "../../query/bd-select";
+import { selectAllTeachers } from "../../query/bd-select";
 
-export const getStudentByname = async (
+export const getTeachers = async (
   req: Request,
   res: Response
 ): Promise<any> => {
   let codeError: number = 400;
   try {
-    const { name } = req.body;
-    const allStudent = await selectStudentByName(name);
+    const allTeachers = await selectAllTeachers();
 
-    res.status(200).send({ allStudent });
+    res.status(200).send({ allTeachers });
   } catch (error: any) {
     res.status(codeError).send({ message: error.message });
   }

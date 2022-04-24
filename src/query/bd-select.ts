@@ -7,11 +7,10 @@ export const selectClass = async (id: string) => {
 };
 
 export const selectActiveClass = async () => {
-  const result = await connection("class").select("*").where("module" , ">", 0 );
+  const result = await connection("class").select("*").where("module", ">", 0);
 
   return result;
 };
-
 
 export const selectIdBySpecialty = async (name: string): Promise<any> => {
   const result = await connection("specialty")
@@ -31,12 +30,11 @@ export const selectTeacherById = async (id: string, email: string) => {
 export const selectStudentByName = async (name: string): Promise<any> => {
   const result = await connection("student")
     .select("*")
-    .whereILike('name', '%'+name);
-    return result;
-}
+    .whereILike("name", "%" + name);
+  return result;
+};
 
 export const selectAllTeachers = async () => {
-  const result = await connection("teacher")
-    .select("*")
-    return result;
-}
+  const result = await connection("teacher").select("*");
+  return result;
+};

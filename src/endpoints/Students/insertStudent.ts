@@ -1,9 +1,6 @@
 import { Request, Response } from "express";
 import { Student } from "../../classes/student";
-import {
-  createNewHobbie,
-  createNewStudent,
-} from "../../query/bd-insert";
+import { createNewHobbie, createNewStudent } from "../../query/bd-insert";
 import { gerarId } from "../../utils/gerarId";
 
 export const InsertStudent = async (
