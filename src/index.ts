@@ -1,5 +1,6 @@
 import { app } from "./app";
-import { insertClass } from "./endpoints/Class/insertClass";
+import { getActiveClass } from "./endpoints/Class/FindActiveClass";
+import { insertClass,  } from "./endpoints/Class/insertClass";
 import { insertTeacher } from "./endpoints/Teacher/insertTeacher";
 
 //POSTS
@@ -10,7 +11,7 @@ app.post("/teacher", insertTeacher);
 
 //GETS
 
-// app.get("/class", getActiveClasses)
+app.get("/activeclass", getActiveClass)
 // app.get("/student", getStudent)
 // app.get("/teacher", getTeacher)
 

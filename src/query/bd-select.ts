@@ -6,6 +6,13 @@ export const selectClass = async (id: string) => {
   return result;
 };
 
+export const selectActiveClass = async () => {
+  const result = await connection("class").select("*").where("module" , ">", 0 );
+
+  return result;
+};
+
+
 export const selectIdBySpecialty = async (name: string): Promise<any> => {
   const result = await connection("specialty")
     .select("id")
@@ -20,3 +27,4 @@ export const selectTeacherById = async (id: string, email: string) => {
     .orWhere("teacher.email", email);
   return result;
 };
+
