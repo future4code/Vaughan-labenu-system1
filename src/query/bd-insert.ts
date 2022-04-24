@@ -22,17 +22,18 @@ export const createNewClass = async (classParam: Class): Promise<any> => {
 // SQL INSERT FOR NEW STUDENT
 
 export const createNewStudent = async (studantParam: Student): Promise<any> => {
+  console.log(studantParam.getId);
   const result = await connection.raw(`
-        INSERT INTO student ()
+        INSERT INTO student
         VALUES (
-            '${studantParam.getId}',
+            '${studantParam.getId()}',
             '${studantParam.getName()}',
-            '${studantParam.getEmail}',
-            '${studantParam.getBirthDate}',
-            '${studantParam.getClassId}'
+            '${studantParam.getEmail()}',
+            '${studantParam.getBirthDate()}',
+            '${studantParam.getClassId()}'
         );
     `);
-  return result[0];
+  return result;
 };
 
 // SQL INSERT FOR STUDENT HOBBIE
@@ -49,7 +50,7 @@ export const createNewStudentHobbie = async (
     '${idHobby}'
      );   
     `);
-  return result[0];
+  return result;
 };
 
 // SQL INSERT FOR NEW HOBBIE
@@ -82,7 +83,7 @@ export const createNewTeacher = async (teacherParam: Teacher): Promise<any> => {
             '${teacherParam.getClassId()}'
         );
     `);
-  return result[0];
+  return result;
 };
 
 // SQL INSERT TEACHER SPECIALITES
@@ -99,5 +100,5 @@ export const createNewTeacherSpecialty = async (
         '${especialty}'
         );   
     `);
-  return result[0];
+  return result;
 };
