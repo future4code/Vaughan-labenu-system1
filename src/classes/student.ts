@@ -11,15 +11,11 @@ export class Student extends User {
     private hobbies: string[]
   ) {
     super(id, name, email, birthDate, classId);
+    this.hobbies = hobbies;
   }
   //GETTERS
 
   public getHobbies(): string[] {
     return this.hobbies;
-  }
-  //SETTERS
-
-  public setHobbies(hobby: string): void {
-    this.hobbies.push(hobby);
   }
 }

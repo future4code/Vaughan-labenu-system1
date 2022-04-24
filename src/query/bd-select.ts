@@ -28,3 +28,15 @@ export const selectTeacherById = async (id: string, email: string) => {
   return result;
 };
 
+export const selectStudentByName = async (name: string): Promise<any> => {
+  const result = await connection("student")
+    .select("*")
+    .whereILike('name', '%'+name);
+    return result;
+}
+
+export const selectAllTeachers = async () => {
+  const result = await connection("teacher")
+    .select("*")
+    return result;
+}

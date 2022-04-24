@@ -22,14 +22,15 @@ export const createNewClass = async (classParam: Class): Promise<any> => {
 // SQL INSERT FOR NEW STUDENT
 
 export const createNewStudent = async (studantParam: Student): Promise<any> => {
+  console.log(studantParam.getId);
   const result = await connection.raw(`
-        INSERT INTO student ()
+        INSERT INTO student
         VALUES (
-            '${studantParam.getId}',
+            '${studantParam.getId()}',
             '${studantParam.getName()}',
-            '${studantParam.getEmail}',
-            '${studantParam.getBirthDate}',
-            '${studantParam.getClassId}'
+            '${studantParam.getEmail()}',
+            '${studantParam.getBirthDate()}',
+            '${studantParam.getClassId()}'
         );
     `);
   return result;
