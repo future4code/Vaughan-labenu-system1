@@ -1,33 +1,58 @@
-## LabenuSystem:
+# LabenuSystem
 
-Você estuda na Labenu\_ há tanto tempo que já parecem anos, não é? Então, hoje, vamos pedir para criar um sistema que represente o básico da nossa organização.
+Projeto com o objetivo de criar um sistema de gerenciamento para uma instituição de ensino.
+As tabelas utilizadas para o gerenciamento do banco de dados foram:
 
-Ele deve possuir, ao menos, as 3 entidades importantes:
+- Estudante (Student)
+- Docente (Teacher)
+- Turma (Class)
+- Specialty
+- Hobby
+- Student_has_hobby
+- Teacher_has_specialty
 
-1. Estudantes
+## :hammer: Tecnologias utilizadas
 
-   Representa estudantes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e os principais hobbies dele.
+<img src="https://img.shields.io/badge/-TypeScript-black"> <img src="https://img.shields.io/badge/-NodeJS-black"> <img src="https://img.shields.io/badge/-MySQL-black"> <img src="https://img.shields.io/badge/express-black">
 
-2. Docente
+## 📝 Documentação Postman
 
-   Representa docentes da nossa instituição. Eles devem possuir: id, nome, email, data de nascimento e todas as especialidades dele. Há 7 especialidades: React, Redux, CSS, Testes, Typescript, Programação Orientada a Objetos e Backend
+[Documentação do projeto](https://documenter.getpostman.com/view/17163447/UyrBhvWj)
 
-3. Turma
+<hr/>
 
-   Toda turma é composta das seguintes características: id, nome, data de início, data de término, lista de professores responsáveis, uma lista de alunos e módulo atual em que a turma está.
+## 🚀 Deploy HEROKU
 
-   O módulo pode assumir os valores de 1 a 7 ou `undefined`, indicando que as aulas dessa turma ainda não começaram. Para esse exercício, vamos considerar que existam dois tipos de turma: integral ou noturna. Há uma restrição para o nome das turmas noturnas: tem que terminar com `-na-night`.
+[Deploy](https://labenu-system.herokuapp.com/)
+
+## ✨ Funcionalidades Finalizadas:
 
 As funcionalidades básicas são:
 
-→ Criar estudante;
+→ Criar Turma;
 
-→ Criar docente;
+→ Criar Estudante;
 
-→ Criar turma;
+→ Criar Docente;
 
-→ Adicionar estudante na turma;
+→ Mudar turma de módulo
 
-→ Adicionar docente na turma;
+→ Buscar turmas ativas
 
-→ Pegar a idade de algum estudante a partir do id
+→ Buscar estudantes através do nome
+
+→ Mudar estudante de turma
+
+→ Buscar todas as pessoas docentes
+
+→ Mudar docente de turma;
+
+## :construction_worker: A fazer:
+
+- [ ] Melhorar as validações da API
+- [ ] Melhorar as funções uteis
+- [ ] Melhorar a arquitetura do sistema
+- [ ] Criar Migrations
+- [ ] Autenticar API
+- [ ] Passar tudo para o Knex Query Builder
+- [ ] Adicionar as funcionalidades do desafio

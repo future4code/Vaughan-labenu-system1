@@ -2,7 +2,7 @@
   "name": "vaughan-labenu-system1",
   "version": "1.0.0",
   "description": "LabenuSystem",
-  "main": "index.js",
+  "main": "index.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/index.js",
@@ -11,7 +11,7 @@
     "postinstall": "npm run tsc",
     "dev": "tsnd src/index.ts",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/future4code/Vaughan-labenu-system1.git"
